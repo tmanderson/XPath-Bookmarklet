@@ -5,7 +5,7 @@
 		output = false,
 		start = new Date().getTime();
 		
-	out.setAttribute('style', 'background-color: #EEE; border-bottom: 2px solid #AAA; font-family: helvetica, sans-serif; color: #777; font-size: 16px; -webkit-box-shadow: 0px 5px 10px rgba(33, 33, 33, .7); position: fixed; height: 20px; top: 0px; left: ' + bPad + '; width: 100%; text-align: center; padding: 10px; opacity: .01;');
+	out.setAttribute('style', 'background-color: #EEE; border-bottom: 2px solid #AAA; font-family: helvetica, sans-serif; color: #777; font-size: 16px; -webkit-box-shadow: 0px 5px 10px rgba(33, 33, 33, .7); position: fixed; height: 20px; top: 0px; left: ' + bPad + '; width: 100%; text-align: center; padding: 10px; opacity: .01; z-index: 99999999');
 	out.id = 'pki-xpath-output';
 	out.innerHTML = "<b>Hold down shift and hover over a node to view it's XPath.</b>";
 	document.body.style.marginTop = window.getComputedStyle(document.body, null).paddingTop;
