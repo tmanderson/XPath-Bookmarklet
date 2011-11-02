@@ -52,7 +52,7 @@ window.onload = function() {
 						
 						if(root.id.length > 0) {
 							tree += tree.length > 0 ? '/' : '';
-							tree = '//' + root.nodeName + '[@id=\'' + root.id + '\']' + tree;
+							tree += tree.length > 0 ? '//' + root.nodeName + '[@id=\'' + root.id + '\']' + '/' : '//' + root.nodeName + '[@id=\'' + root.id + '\']';
 							out.innerHTML = '<b>' + tree.toLowerCase() + '</b>';
 							return false;
 						}
