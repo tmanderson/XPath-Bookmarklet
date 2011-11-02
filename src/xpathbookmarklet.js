@@ -51,8 +51,8 @@ window.onload = function() {
 							index = 1;
 						
 						if(root.id.length > 0) {
-							tree += '//' + root.nodeName + '[@id=\'' + root.id + '\']';
 							tree += tree.length > 0 ? '/' : '';
+							tree = '//' + root.nodeName + '[@id=\'' + root.id + '\']' + tree;
 							out.innerHTML = '<b>' + tree.toLowerCase() + '</b>';
 							return false;
 						}
