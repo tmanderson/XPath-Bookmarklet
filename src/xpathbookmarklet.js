@@ -1,3 +1,4 @@
+window.onload = function() {
 (function() {
 	var els = document.getElementsByTagName('*'),
 		bPad = window.getComputedStyle(document.body, null).paddingLeft,
@@ -48,7 +49,14 @@
 						var nodes = root.parentNode.childNodes,
 							nodeCount = 0,
 							index = 1;
-					
+						
+						if(root.id.length > 0) {
+							tree += '//' + root.nodeName + '[@id=\'' + root.id + '\']';
+							tree += tree.length > 0 ? '/' : '';
+							out.innerHTML = '<b>' + tree.toLowerCase() + '</b>';
+							return false;
+						}
+
 						for(n in nodes) {
 							if(nodes[n].nodeName === root.nodeName) {
 								nodeCount++;
@@ -74,3 +82,4 @@
 		}
 	}
 })();
+}
